@@ -46,6 +46,14 @@ Display the edit button and the form on every page, by including these commands 
     <%= edit_seo_dialog %>
     
 
+## TODO
+This gem is in early development, there are still some things to do:
+- add system for default values (default_title(@article.title) for example)
+- add options for open_graph
+- add documentation
+- include testing
+
+
 ## Contributing
 
 1. Fork it
