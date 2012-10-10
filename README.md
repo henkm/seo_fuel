@@ -15,16 +15,17 @@ Or install it yourself as:
     $ gem install seo_fuel
 
 ## Usage
-after installation, run these commands:
-{{{
-  rails generate seo_fuel
-}}}
+After installation, run these commands:
 
-add these lines to your assets manifest files
-{{{
+  rails generate seo_fuel
+
+
+this will generate a database migration to add a SeoTag table, it will also update your routes and add the .yml file for configuration.
+
+Add these lines to your assets manifest files
+
   # appcliation.css
   
-}}}
 
 ## Contributing
 
