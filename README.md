@@ -24,8 +24,11 @@ this will generate a database migration to add a SeoTag table, it will also upda
 
 Add these lines to your assets manifest files
 
-    # appcliation.css
+    # in appcliation.css
+    *= require seo_fuel
   
+    # in appcliation.js
+    //= require seo_fuel
 
 ## Contributing
 
