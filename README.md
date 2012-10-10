@@ -17,14 +17,14 @@ Or install it yourself as:
 ## Usage
 After installation, run these commands:
 
-  rails generate seo_fuel
-
+    $ rails generate seo_fuel
+    $ bundle exec rake db:migrate
 
 this will generate a database migration to add a SeoTag table, it will also update your routes and add the .yml file for configuration.
 
 Add these lines to your assets manifest files
 
-  # appcliation.css
+    # appcliation.css
   
 
 ## Contributing
