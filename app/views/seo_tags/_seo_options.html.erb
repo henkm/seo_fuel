@@ -1,0 +1,17 @@
+<div id="edit_seo_dialog" class="seo_fuel" style="display: none;">
+  <%= form_for SeoTag.find_or_initialize_by_path(request.path), remote: true, html: {class: "seo_form"} do |f|%>
+    <%= f.hidden_field :path %>
+    <%= f.label :title, "#{I18n.t('seo.form.title')}".html_safe %>
+    <%= f.text_field :title %>
+    <div class="spacer"></div>
+    <%= f.label :description, "#{I18n.t('seo.form.description')}".html_safe %>
+    <%= f.text_area :description, rows: 3 %>
+    <div class="spacer"></div>
+    <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
+    <%= f.text_area :keywords, rows: 3 %>
+    <div class="spacer"></div>
+    <%= link_to I18n.t('seo.cancel'), "#", id: "cancel_seo_btn"%>
+    <%= f.submit I18n.t('seo.save')%> 
+  <% end %>
+  
+</div>
