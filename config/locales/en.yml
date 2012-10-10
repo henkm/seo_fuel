@@ -1,2 +1,11 @@
 en:
-  
+  seo:
+    button_text: "Edit SEO options"
+    cancel: "Cancel"
+    save: "Save"
+    form:
+      title: "Title tag"
+      title_tip: ""
+      description: "Description tag"
+      description_tip: ""
+      keywords: Keywords

@@ -48,7 +48,7 @@ Display the edit button and the form on every page, by including these commands 
 
 ## TODO
 This gem is in early development, there are still some things to do:
-- add system for default values (default_title(@article.title) for example)
+- add system for default values (<% default_title(@article.title) %> for example)
 - add options for open_graph
 - add documentation
 - include testing

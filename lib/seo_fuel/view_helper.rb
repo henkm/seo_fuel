@@ -8,6 +8,20 @@ module SeoFuel
       link_to text, "#", class: "seo_fuel #{klass}", id: "edit_seo_btn"
     end
     
+    def default_title(title)
+      @default_title = title.force_encoding('utf-8')
+    end
+    
+    def title_to_show
+      if current_page && current_page.title.present?
+        current_page.title
+      elsif @default_title.present?
+        @default_title
+      else
+        ""
+      end
+    end
+    
     def edit_seo_dialog
       render :partial => "seo_tags/seo_options"
     end
