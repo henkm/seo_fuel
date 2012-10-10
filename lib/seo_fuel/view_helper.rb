@@ -23,6 +23,10 @@ module SeoFuel
     def show_description
       render :partial => "seo_tags/description"
     end
+
+    def show_keywords
+      render :partial => "seo_tags/keywords"
+    end
     
   end
 end
