@@ -1,8 +1,8 @@
 <div id="edit_seo_dialog" class="seo_fuel" style="display: none;">
-  <%= form_for SeoTag.find_or_create_by_path(request.path), remote: true, html: {class: "seo_form"} do |f|%>
+  <%= form_for SeoTag.find_or_initialize_by_path(request.path), remote: true, html: {class: "seo_form"} do |f|%>
     <%= f.hidden_field :path %>
     <%= f.label :title, "#{I18n.t('seo.form.title')}".html_safe %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, placeholder: @default_title %>
     <div class="spacer"></div>
     <%= f.label :description, "#{I18n.t('seo.form.description')}".html_safe %>
     <%= f.text_area :description, rows: 3 %>

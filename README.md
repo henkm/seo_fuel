@@ -45,10 +45,14 @@ Display the edit button and the form on every page, by including these commands 
     <%= edit_seo_button %>
     <%= edit_seo_dialog %>
     
+### Setting default values
+By default, all titles are blank. If a title is blank, the one specified in `seo_fuel_settings.yml` should be used (NOT YET IMPLEMENTED). Per template, you can specify a default value by adding a line of code to your view template:
+
+    <% default_title("Site Name | #{@article.title}") %>
+
 
 ## TODO
 This gem is in early development, there are still some things to do:
-- add system for default values (<% default_title(@article.title) %> for example)
 - add options for open_graph
 - add documentation
 - include testing
