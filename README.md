@@ -1,4 +1,4 @@
-# SEO Fuel
+# SEO Fuel: easily gas up search engines
 
 ## Installation
 
