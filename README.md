@@ -29,6 +29,19 @@ Add these lines to your assets manifest files
   
     # in appcliation.js
     //= require seo_fuel
+    
+### Implementation in views
+Replace the title, description and keywords tags for these methods:
+    <!-- application.html.erb -->
+    <%= show_title %>
+    <%= show_description %>
+    <%= show_keywords %>
+    
+Display the edit button and the form on every page, by including these commands on the bottom of your application.html.erb (just above the closing body tag)
+    <!-- application.html.erb -->
+    <%= edit_seo_button %>
+    <%= edit_seo_dialog %>
+    
 
 ## Contributing
 

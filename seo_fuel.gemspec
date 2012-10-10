@@ -6,7 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["meijerhenk@gmail.com"]
   gem.description   = ["Customize the SEO options for every single page of your rails app. Each url has its own SEO options."]
   gem.summary       = ["Add exstensive SEO options to every page on your website."]
-  gem.homepage      = "http://www.eskesmedia.nl"
+  gem.homepage      = "https://github.com/henkm/seo_fuel"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
