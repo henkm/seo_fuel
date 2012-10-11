@@ -7,6 +7,10 @@ module SeoFuel
     def default_settings_from_config_file
       YAML::load(File.open("config/seo_fuel_settings.yml"))
     end
+
+    def seo_fuel_authentication_key
+      default_settings_from_config_file['SEO_FUEL_SETTINGS']['key']
+    end
     
     # used in version < 0.0.4
     def edit_seo_button(text=I18n.t('seo.button_text'), klass="")

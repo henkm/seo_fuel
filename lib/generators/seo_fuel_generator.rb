@@ -6,17 +6,23 @@ class SeoFuelGenerator < Rails::Generators::Base
 
   desc "Put the JavaScript and migration in place"
   source_root File.join(File.dirname(__FILE__), "templates")
-
+  
   def install
     copy_javascript if needs_js_copied?
     copy_options_file
     copy_language_file
-    route("resources :seo_tags")
-    migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
+    # route("resources :seo_tags")
+    # migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
   end
 
   private
 
+
+  def template(from, to)
+    erb = File.read(File.expand_path("../config/templates/#{from}", __FILE__))
+    put ERB.new(erb).result(binding), to
+  end
+  
   def gsub_file(relative_destination, regexp, *args, &block)
     path = destination_path(relative_destination)
     content = File.read(path).gsub(regexp, *args, &block)
@@ -24,7 +30,8 @@ class SeoFuelGenerator < Rails::Generators::Base
   end
 
   def copy_options_file
-    copy_file File.join(config_path, 'seo_fuel_settings.yml'), config_destination
+    template "seo_fuel_settings.yml.erb", config_destination
+    # copy_file File.join(config_path, 'seo_fuel_settings.yml'), config_destination
   end
   
   def copy_language_file
