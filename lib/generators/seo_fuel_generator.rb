@@ -10,8 +10,9 @@ class SeoFuelGenerator < Rails::Generators::Base
   def install
     copy_javascript if needs_js_copied?
     copy_options_file
-    route("resources :seo_tags")
-    migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
+    copy_language_file
+    # route("resources :seo_tags")
+    # migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
   end
 
   private
@@ -25,6 +26,10 @@ class SeoFuelGenerator < Rails::Generators::Base
   def copy_options_file
     copy_file File.join(config_path, 'seo_fuel_settings.yml'), config_destination
   end
+  
+  def copy_language_file
+    copy_file File.join(locales_path, 'en.seo_fuel.yml'), language_file_destination
+  end
 
   def copy_javascript
     copy_file File.join(javascript_path, 'seo_fuel.js'), js_destination
@@ -32,6 +37,10 @@ class SeoFuelGenerator < Rails::Generators::Base
 
   def config_path
     File.join(%w(.. .. .. config))
+  end
+  
+  def language_path
+    File.join(%w(.. .. .. config locales))
   end
 
   def javascripts_path
@@ -50,5 +59,8 @@ class SeoFuelGenerator < Rails::Generators::Base
     'config/seo_fuel_settings.yml'
   end
 
+  def language_file_destination
+    'config/locales/en.seo_fuel.yml'
+  end
 
 end

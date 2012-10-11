@@ -2,7 +2,7 @@
 
 _This gem is still in early development. Described features work, but some features are still lacking. I'll be updating the documentation as I go along. Feel free to fork this project and improve on it._
 
-SEO Fuel is a super easy way to manage SEO tags in your Rails App. It doesn't require any adjustments to existing models or controllers. 
+SEO Fuel is a super easy way to manage SEO tags in your Rails app. It doesn't require any adjustments to existing models or controllers. 
 
 SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings aren't linked to a page by foreign keys, but rather by path ('/articles/1-article-title')
 
@@ -45,7 +45,6 @@ Replace the title, description and keywords tags for these methods:
     
 Display the edit button and the form on every page, by including these commands on the bottom of your application.html.erb (just above the closing body tag)
 
-    <%= edit_seo_button %>
     <%= edit_seo_dialog %>
     
 ### Setting default values
@@ -53,6 +52,10 @@ By default, all titles are blank. If a title is blank, the one specified in `seo
 The 'in browser' added SEO settings take precedence over all default values. 
 
     <% default_title("Site Name | #{@article.title}") %>
+
+
+### I18n
+This gem is fully I18n adjustable. Just edit the locale file, placed in the config directory of your Rails app.
 
 ## TODO
 This gem is in early development, there are still some things to do:
