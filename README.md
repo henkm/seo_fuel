@@ -4,7 +4,9 @@ _This gem is still in early development. Described features work, but some featu
 
 SEO Fuel is a super easy way to manage SEO tags in your Rails app. It doesn't require any adjustments to existing models or controllers. 
 
-SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings aren't linked to a page by foreign keys, but rather by path ('/articles/1-article-title')
+SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings are stored in their own table and aren't linked to a page by complicated foreign keys, but rather by path ('/articles/1-article-title').
+
+The main idea behind this gem is that end users often want to be able to fine tune SEO settings right in the browser, without going to some sort of backend or options file.
 
 ## Installation
 
@@ -47,6 +49,10 @@ Display the edit button and the form on every page, by including these commands 
 
     <%= edit_seo_dialog %>
     
+or, if you wish to only let signed in users be able to see the form (using devse in this example):
+
+    <%= edit_seo_dialog if admin_signed_in? %>
+    
 ### Setting default values
 By default, all titles are blank. If a title is blank, the one specified in `seo_fuel_settings.yml` should be used (NOT YET IMPLEMENTED). Per template, you can specify a default value by adding a line of code to your view template. This value takes precedence over the default title.
 The 'in browser' added SEO settings take precedence over all default values. 
@@ -55,7 +61,7 @@ The 'in browser' added SEO settings take precedence over all default values.
 
 
 ### I18n
-This gem is fully I18n adjustable. Just edit the locale file, placed in the config directory of your Rails app.
+This gem is fully I18n adjustable. Just edit the locale file, placed in the locales directory of your Rails app.
 
 ## TODO
 This gem is in early development, there are still some things to do:
