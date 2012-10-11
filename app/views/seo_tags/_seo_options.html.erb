@@ -6,10 +6,10 @@
     <%= f.text_field :title, placeholder: @default_title %>
     <div class="spacer"></div>
     <%= f.label :description, "#{I18n.t('seo.form.description')}".html_safe %>
-    <%= f.text_area :description, rows: 3 %>
+    <%= f.text_area :description, rows: 3, placeholder: @default_description %>
     <div class="spacer"></div>
     <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
-    <%= f.text_area :keywords, rows: 3 %>
+    <%= f.text_area :keywords, rows: 3, placeholder: @default_keywords %>
     <div class="spacer"></div>
     <%= link_to I18n.t('seo.cancel'), "#", id: "cancel_seo_btn"%>
     <%= f.submit I18n.t('seo.save')%> 

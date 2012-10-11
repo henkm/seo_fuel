@@ -16,6 +16,44 @@ module SeoFuel
       @default_title = title.force_encoding('utf-8')
     end
     
+
+    # set your default description in any view template, by 
+    # simply calling `default_description(your_description_here)`
+    # this description takes precedence over the default description set
+    # in your config file, but not over the one set 'in browser'
+    def default_description(description)
+      @default_description = description.force_encoding('utf-8')
+    end
+
+
+    # determines wich description to show
+    def description_to_show
+      if current_page && current_page.description.present?
+        current_page.description
+      elsif @default_description.present?
+        @default_description
+      else
+        ""
+      end
+    end
+    
+    # set your default keywords in any view template
+    def default_keywords(keywords)
+      @default_keywords = keywords.force_encoding('utf-8')
+    end
+
+
+    # determines wich description to show
+    def keywords_to_show
+      if current_page && current_page.keywords.present?
+        current_page.keywords
+      elsif @default_keywords.present?
+        @default_keywords
+      else
+        ""
+      end
+    end
+
     # determines wich title to show
     def title_to_show
       if current_page && current_page.title.present?
