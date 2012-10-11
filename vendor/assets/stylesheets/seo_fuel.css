@@ -87,7 +87,22 @@
   float: right;
   width: 150px;
   margin-right: 20px;
+  background: #eee;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 1px 1px 0px #dedede;
+  filter: dropshadow(color=#dedede, offx=1, offy=1);
 }
+
+.seo_form input[type=submit]:hover {
+  background: #ccc;
+}
+
+.seo_form input[type=submit]:active {
+  background: #bbb;
+}
+
 #cancel_seo_btn {
   float: left;
   text-decoration: none;
