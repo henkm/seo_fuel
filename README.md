@@ -59,7 +59,7 @@ or, if you wish to only let signed in users be able to see the form (using devse
     <%= edit_seo_dialog if admin_signed_in? %>
     
 ### Setting default values
-By default, all meta tags are blank. If a tag is blank, the one specified in `seo_fuel_settings.yml` should be used (NOT YET IMPLEMENTED). Per template, you can specify a default value by adding a few lines of code to your view template. These values take precedence over the default values.
+By default, all meta tags are blank. If a tag is blank, the one specified in `seo_fuel_settings.yml` will be used. Per template, you can specify a default value by adding a few lines of code to your view template. These values take precedence over the default values.
 The 'in browser' added SEO settings take precedence over all default values. 
 
     <% default_title("Site Name | #{@article.title}") %>

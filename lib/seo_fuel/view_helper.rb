@@ -3,6 +3,11 @@ module SeoFuel
   
   module ViewHelper
     
+    # opens and reads the users options file
+    def default_settings_from_config_file
+      YAML::load(File.open("config/seo_fuel_settings.yml"))
+    end
+    
     # used in version < 0.0.4
     def edit_seo_button(text=I18n.t('seo.button_text'), klass="")
       link_to text, "#", class: "seo_fuel #{klass}", id: "edit_seo_btn"
@@ -32,8 +37,8 @@ module SeoFuel
         current_page.description
       elsif @default_description.present?
         @default_description
-      else
-        ""
+      elsif default_settings_from_config_file
+        default_settings_from_config_file['SEO_FUEL_SETTINGS']['default_description']
       end
     end
     
@@ -49,8 +54,8 @@ module SeoFuel
         current_page.keywords
       elsif @default_keywords.present?
         @default_keywords
-      else
-        ""
+      elsif default_settings_from_config_file
+        default_settings_from_config_file['SEO_FUEL_SETTINGS']['default_keywords']
       end
     end
 
@@ -60,8 +65,8 @@ module SeoFuel
         current_page.title
       elsif @default_title.present?
         @default_title
-      else
-        ""
+      elsif default_settings_from_config_file
+        default_settings_from_config_file['SEO_FUEL_SETTINGS']['default_title']
       end
     end
     
