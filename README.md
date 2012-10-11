@@ -17,7 +17,7 @@ SEO Fuel makes it realy easy to have total control of the meta tags, while still
 
 Add this line to your application's Gemfile:
 
-    gem 'seo_fuel'
+    gem 'seo_fuel', git: "https://github.com/henkm/seo_fuel.git"
 
 And then execute:
 
