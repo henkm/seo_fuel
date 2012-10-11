@@ -3,12 +3,13 @@
 }
 
 #edit_seo_btn {
+  font-size: 12px;
   text-align: center;
   position: fixed;
   top: -5px;
   left: 50%;
   margin-left: -75px;
-  width: 150px;
+  min-width: 150px;
   background: #fff;
   border: 1px solid #dedede;
   padding-bottom: 4px;
@@ -28,18 +29,18 @@
   );
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  border-radius: 3px;
+/*  border-radius: 3px;
   -webkit-box-shadow: 0px 0px 2px 2px #dedede;
   box-shadow: 0px 0px 2px 2px #dedede;
-  
+*/  
   border: 1px solid #aaa;
   
   font-family: arial;
   text-decoration: none;
-  color: #fff;
+  color: #333;
   
-  text-shadow: 1px 1px 0px #333;
-  filter: dropshadow(color=#333, offx=1, offy=1);
+  text-shadow: 1px 1px 0px #FFF;
+  filter: dropshadow(color=#FFF, offx=1, offy=1);
 }
 
 #edit_seo_dialog {
