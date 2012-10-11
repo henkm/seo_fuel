@@ -4,6 +4,7 @@ _This gem is still in early development. Described features work, but some featu
 
 SEO Fuel is a super easy way to manage SEO tags in your Rails app. It doesn't require any adjustments to existing models or controllers. 
 
+![Edit SEO right in your browser](lib/example.png "Example Usage")
 
 ## Philosophy
 Where to put SEO? The main idea behind this gem is that end users often want to be able to fine tune SEO settings right in the browser, without going to some sort of backend or options file.

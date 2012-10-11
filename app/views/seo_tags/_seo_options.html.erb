@@ -1,4 +1,4 @@
-<%= link_to I18n.t('seo.button_text'), "#", class: "seo_fuel", id: "edit_seo_btn" unless SeoFuel::VERSION > "0.0.5" %>
+<%= link_to I18n.t('seo.button_text'), "#", class: "seo_fuel", id: "edit_seo_btn" unless SeoFuel::VERSION < "0.0.5" %>
 <div id="edit_seo_dialog" class="seo_fuel" style="display: none;">
   <%= form_for SeoTag.find_or_initialize_by_path(request.path), remote: true, html: {class: "seo_form"} do |f|%>
     <%= f.hidden_field :path %>
