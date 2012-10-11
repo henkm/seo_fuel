@@ -19,8 +19,10 @@ class SeoFuelGenerator < Rails::Generators::Base
 
 
   def template(from, to)
-    erb = File.read(File.expand_path("../config/templates/#{from}", __FILE__))
-    put ERB.new(erb).result(binding), to
+    erb = File.read(File.expand_path("../../../config/templates/#{from}", __FILE__))
+    yml = ERB.new(erb).result(binding)
+    File.open(to, 'w') {|f| f.write(yml) }
+    puts "created option file: config/seo_fuel_settigns.yml"
   end
   
   def gsub_file(relative_destination, regexp, *args, &block)

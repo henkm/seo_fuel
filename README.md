@@ -71,7 +71,6 @@ This gem is fully I18n adjustable. Just edit the locale file, placed in the loca
 
 ## TODO
 This gem is in early development, there are still some things to do:
-- add authentication layer
 - add options for open_graph
 - add documentation
 - include testing
