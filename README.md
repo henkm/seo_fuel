@@ -1,4 +1,7 @@
 # SEO Fuel: easily gas up search engines
+
+_This gem is still in early development. Described features work, but some features are still lacking. I'll be updating the documentation as I go along. Feel free to fork this project and improve on it._
+
 SEO Fuel is a super easy way to manage SEO tags in your Rails App. It doesn't require any adjustments to existing models or controllers. 
 
 SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings aren't linked to a page by foreign keys, but rather by path ('/articles/1-article-title')
