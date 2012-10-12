@@ -12,3 +12,5 @@ nl:
       keywords: Keywords
       canonical: Canonical
       canonical_placeholder: "URL van canoncial pagina, indien van toepassing"
+      noindex: noindex (blokkeer robots op deze pagina)
+      nofollow: nofollow (robots mogen links op deze pagina niet indexeren)

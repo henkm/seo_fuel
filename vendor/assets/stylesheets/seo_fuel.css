@@ -128,3 +128,17 @@
   float: right;
   font-size: 12px;
 }
+
+.seo_check_box{
+  margin-left: 160px;
+}
+.seo_check_box input{
+  float: left;
+  width: 30px;
+  border: 1px solid red;
+}
+.seo_check_box label{
+  width: 400px;
+  text-align: left;
+  float: left;
+}

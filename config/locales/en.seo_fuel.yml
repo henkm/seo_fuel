@@ -12,3 +12,5 @@ en:
       keywords: Keywords
       canonical: Canonical
       canonical_placeholder: "URL of canoncial page, if applicable"
+      noindex: noindex (block crawlers from this page)
+      nofollow: nofollow (stop crawlers from following links on this page)

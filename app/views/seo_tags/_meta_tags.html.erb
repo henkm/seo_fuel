@@ -6,3 +6,6 @@
 <% if canonical.present? -%>
 <link rel="canonical" href="<%= canonical %>" />
 <% end -%>
+<% if robot_restrictions -%>
+<meta name="robots" content="<%= robot_restrictions%>">
+<% end -%>

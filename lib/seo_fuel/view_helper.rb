@@ -79,6 +79,18 @@ module SeoFuel
       current_page.canonical if current_page
     end
 
+
+    # renders a list of robot restrictions (nofollow, noindex)
+    def robot_restrictions
+      restrictions = []
+      restrictions << "noindex" if current_page.noindex
+      restrictions << "nofollow" if current_page.nofollow
+      if restrictions.any?
+        return restrictions.join(', ')
+      else
+        return false
+      end
+    end
     
     # render the dialog box and edit button by calling
     # `edit_seo_dialog` in the templates that should have this

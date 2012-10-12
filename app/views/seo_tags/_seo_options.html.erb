@@ -14,11 +14,19 @@
     <%= link_to I18n.t('seo.more_options'), "#", id: 'more-options-btn'%>
     
     <div style="display: none;" id="more-options">
-    <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
-    <%= f.text_area :keywords, rows: 3, placeholder: @default_keywords %>
-    <div class="spacer"></div>
-    <%= f.label :canonical, "#{I18n.t('seo.form.canonical')}".html_safe %>
-    <%= f.text_field :canonical, placeholder: I18n.t('seo.form.canonical_placeholder') %>
+      <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
+      <%= f.text_area :keywords, rows: 3, placeholder: @default_keywords %>
+      <div class="spacer"></div>
+      <%= f.label :canonical, "#{I18n.t('seo.form.canonical')}".html_safe %>
+      <%= f.text_field :canonical, placeholder: I18n.t('seo.form.canonical_placeholder') %>
+      <div class="spacer"></div>
+      <div class="seo_check_box">
+        <%= f.check_box :nofollow %><%= f.label :nofollow, "#{I18n.t('seo.form.nofollow')}".html_safe %>
+      </div>
+      <div class="spacer"></div>
+      <div class="seo_check_box">
+        <%= f.check_box :noindex %><%= f.label :noindex, "#{I18n.t('seo.form.noindex')}".html_safe %>
+      </div>
     </div>
     <div class="spacer"></div>
     <div id="seo_buttons">

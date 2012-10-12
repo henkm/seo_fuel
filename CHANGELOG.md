@@ -1,3 +1,11 @@
+## version 0.1.2
+- add noindex and nofollow
+- show 'more options' link
+- improved UI
+
+## version 0.1.1
+- improved UI
+
 ## version 0.0.9
 - improved UI
 - read defaults from YAML file
