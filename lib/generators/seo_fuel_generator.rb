@@ -11,8 +11,8 @@ class SeoFuelGenerator < Rails::Generators::Base
     copy_javascript if needs_js_copied?
     copy_options_file
     copy_language_file
-    # route("resources :seo_tags")
-    # migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
+    route("resources :seo_tags")
+    migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
   end
 
   private

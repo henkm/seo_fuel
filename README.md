@@ -54,10 +54,6 @@ Display the edit button and the form on every page, by including these commands 
 
     <%= edit_seo_dialog %>
     
-or, if you wish to only let signed in users be able to see the form (using devse in this example):
-
-    <%= edit_seo_dialog if admin_signed_in? %>
-    
 ### Setting default values
 By default, all meta tags are blank. If a tag is blank, the one specified in `seo_fuel_settings.yml` will be used. Per template, you can specify a default value by adding a few lines of code to your view template. These values take precedence over the default values.
 The 'in browser' added SEO settings take precedence over all default values. 
@@ -68,6 +64,12 @@ The 'in browser' added SEO settings take precedence over all default values.
 
 ### I18n
 This gem is fully I18n adjustable. Just edit the locale file, placed in the locales directory of your Rails app.
+
+
+## Authentication
+Not all users are allowed to edit SEO settings, obviously. To only let specific users see the SEO form, you can simply use your own restrictions when rending the form. When only admin users are supposed to see the form (when using Devise), use this:
+
+    <%= edit_seo_dialog if admin_signed_in? %>
 
 ## TODO
 This gem is in early development, there are still some things to do:
