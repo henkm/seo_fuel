@@ -9,7 +9,8 @@ $(document).ready(function() {
   });
 
   $('#more-options-btn').bind('click', function() {
-    $('#more-options').toggle();
+    $('#more-options').show();
+    $('#more-options-btn').hide();
   });
   
 });
@@ -17,4 +18,6 @@ $(document).ready(function() {
 function hideSeoForm(){
   $('#edit_seo_dialog').slideUp();
   $('#edit_seo_btn').slideDown();
+  $('#more-options').hide();
+  $('#more-options-btn').show();
 }
