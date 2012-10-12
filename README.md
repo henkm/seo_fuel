@@ -70,6 +70,8 @@ This gem is fully I18n adjustable. Just edit the locale file, placed in the loca
 Not all users are allowed to edit SEO settings, obviously. To only let specific users see the SEO form, you can simply use your own restrictions when rending the form. When only admin users are supposed to see the form (when using Devise), use this:
 
     <%= edit_seo_dialog if admin_signed_in? %>
+    
+Authentication for the Controller layer is added through the key in the hidden field. This random key is set in the `seo_fuel_settings.yml` configuration file. Only when this key matches, the record will be saved.
 
 ## TODO
 This gem is in early development, there are still some things to do:
