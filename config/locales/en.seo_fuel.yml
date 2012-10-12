@@ -4,6 +4,7 @@ en:
     cancel: Cancel
     save: Save
     more_options: More options
+    or: or
     form:
       title: "Title"
       title_tip: ""

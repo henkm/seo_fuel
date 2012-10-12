@@ -4,6 +4,7 @@ nl:
     cancel: Annuleer
     save: Opslaan
     more_options: Meer opties
+    or: of
     form:
       title: "Title tag"
       title_tip: "De tekst die als titel van de pagina wordt ingesteld. Is te zien boven in je browserscherm."
