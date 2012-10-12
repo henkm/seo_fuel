@@ -2,6 +2,7 @@ $(document).ready(function() {
   $('#edit_seo_btn').bind('click', function() {
     $('#edit_seo_btn').slideUp();
     $('#edit_seo_dialog').slideDown();
+    $('#seo_tag_title').focus();
   });
   
   $('#cancel_seo_btn, #save_seo_tag').bind('click', function() {
