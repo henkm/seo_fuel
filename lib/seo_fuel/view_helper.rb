@@ -73,6 +73,12 @@ module SeoFuel
         default_settings_from_config_file['SEO_FUEL_SETTINGS']['default_title']
       end
     end
+
+    # renders canonical
+    def canonical
+      current_page.canonical if current_page
+    end
+
     
     # render the dialog box and edit button by calling
     # `edit_seo_dialog` in the templates that should have this
@@ -100,8 +106,8 @@ module SeoFuel
     end
 
     # renders the keywords inside a `<meta>` tag.
-    def show_keywords
-      render :partial => "seo_tags/keywords"
+    def show_meta_tags
+      render :partial => "seo_tags/meta_tags"
     end
     
   end

@@ -1,0 +1,8 @@
+<title><%= title_to_show %></title>
+<meta name="description" content="<%= description_to_show %>">
+<% if keywords_to_show -%>
+<meta name="keywords" content="<%= keywords_to_show %>">
+<% end -%>
+<% if canonical.present? -%>
+<link rel="canonical" href="<%= canonical %>" />
+<% end -%>

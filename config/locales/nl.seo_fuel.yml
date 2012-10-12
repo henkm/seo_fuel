@@ -1,11 +1,14 @@
 nl:
   seo:
-    button_text: "Bewerk SEO opties"
-    cancel: "Annuleer"
-    save: "Opslaan"
+    button_text: Bewerk SEO opties
+    cancel: Annuleer
+    save: Opslaan
+    more_options: Meer opties
     form:
       title: "Title tag"
       title_tip: "De tekst die als titel van de pagina wordt ingesteld. Is te zien boven in je browserscherm."
       description: "Description tag"
       description_tip: "Omschrijf waar deze pagina over gaat. Deze tekst wordt vaak getoond in Google."
       keywords: Keywords
+      canonical: Canonical
+      canonical_placeholder: "URL van canoncial pagina, indien van toepassing"

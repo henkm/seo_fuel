@@ -44,11 +44,9 @@ Add these lines to your assets manifest files
     //= require seo_fuel
     
 ### Implementation in views
-Replace the title, description and keywords tags for these methods:
+Replace the title, description and keywords tags for this method:
 
-    <%= show_title %>
-    <%= show_description %>
-    <%= show_keywords %>
+    <%= show_meta_tags %>
     
 Display the edit button and the form on every page, by including these commands on the bottom of your application.html.erb (just above the closing body tag)
 
@@ -71,7 +69,7 @@ Not all users are allowed to edit SEO settings, obviously. To only let specific 
 
     <%= edit_seo_dialog if admin_signed_in? %>
     
-Authentication for the Controller layer is added through the key in the hidden field. This random key is set in the `seo_fuel_settings.yml` configuration file. Only when this key matches, the record will be saved. If this form is only visible for signed in admins, they are the only ones that can submit POST requests with the proper key.
+Authentication for the Controller layer is added through the key in a hidden field in the form. This random key is set in the `seo_fuel_settings.yml` configuration file. Only when this key matches, the record will be saved. If this form is only visible for signed in admins, they are the only ones that can submit POST requests with the proper key.
 
 ## TODO
 This gem is in early development, there are still some things to do:

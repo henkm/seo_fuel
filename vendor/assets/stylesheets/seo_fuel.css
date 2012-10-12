@@ -71,7 +71,9 @@
   float: left;
   width: 150px;
   text-align: right;
-  margin-right: 15px;
+  margin-right: 12px;
+  font-size: 12px;
+  margin-top: 4px;
 }
 
 .seo_form input, .seo_form textarea {
@@ -84,15 +86,14 @@
   size: 18px;
 }
 .seo_form input[type=submit] {
-  float: right;
   width: 150px;
-  margin-right: 20px;
   background: #eee;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   text-shadow: 1px 1px 0px #dedede;
   filter: dropshadow(color=#dedede, offx=1, offy=1);
+  float: left;
 }
 
 .seo_form input[type=submit]:hover {
@@ -107,4 +108,23 @@
   float: left;
   text-decoration: none;
   color: #333;
+  font-size: 12px;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+#cancel_seo_btn a {
+  text-decoration: none;
+  color: #333;
+}
+
+#more-options-btn{
+  font-size: 12px;
+  margin-left: 160px;
+  text-decoration: none;
+  color: #333;
+}
+
+#seo_buttons {
+  float: right;
+  font-size: 12px;
 }

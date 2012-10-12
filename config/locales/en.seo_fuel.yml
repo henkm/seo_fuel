@@ -1,11 +1,14 @@
 en:
   seo:
-    button_text: "Edit SEO options"
-    cancel: "Cancel"
-    save: "Save"
+    button_text: Edit SEO options
+    cancel: Cancel
+    save: Save
+    more_options: More options
     form:
-      title: "Title tag"
+      title: "Title"
       title_tip: ""
-      description: "Description tag"
+      description: "Description"
       description_tip: ""
       keywords: Keywords
+      canonical: Canonical
+      canonical_placeholder: "URL of canoncial page, if applicable"

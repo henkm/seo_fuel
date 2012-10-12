@@ -18,7 +18,7 @@ class SeoFuelGenerator < Rails::Generators::Base
   private
 
 
-  def template(from, to)
+  def render_erb_template(from, to)
     erb = File.read(File.expand_path("../../../config/templates/#{from}", __FILE__))
     yml = ERB.new(erb).result(binding)
     File.open(to, 'w') {|f| f.write(yml) }
@@ -32,7 +32,7 @@ class SeoFuelGenerator < Rails::Generators::Base
   end
 
   def copy_options_file
-    template "seo_fuel_settings.yml.erb", config_destination
+    render_erb_template "seo_fuel_settings.yml.erb", config_destination
     # copy_file File.join(config_path, 'seo_fuel_settings.yml'), config_destination
   end
   

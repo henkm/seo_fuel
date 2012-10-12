@@ -7,6 +7,10 @@ $(document).ready(function() {
   $('#cancel_seo_btn, #save_seo_tag').bind('click', function() {
     hideSeoForm();
   });
+
+  $('#more-options-btn').bind('click', function() {
+    $('#more-options').toggle();
+  });
   
 });
 

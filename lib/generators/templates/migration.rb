@@ -8,6 +8,8 @@ class CreateSeoFuel < ActiveRecord::Migration
       t.text :open_graph
       t.string :path
       t.boolean :use_project_title
+      t.boolean :noindex
+      t.boolean :nofollow
       t.timestamps
     end
         

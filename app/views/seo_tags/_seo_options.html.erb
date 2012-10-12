@@ -8,11 +8,23 @@
     <div class="spacer"></div>
     <%= f.label :description, "#{I18n.t('seo.form.description')}".html_safe %>
     <%= f.text_area :description, rows: 3, placeholder: @default_description %>
+
     <div class="spacer"></div>
+
+    <%= link_to I18n.t('seo.more_options'), "#", id: 'more-options-btn'%>
+    
+    <div style="display: none;" id="more-options">
     <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
     <%= f.text_area :keywords, rows: 3, placeholder: @default_keywords %>
     <div class="spacer"></div>
-    <%= link_to I18n.t('seo.cancel'), "#", id: "cancel_seo_btn"%>
-    <%= f.submit I18n.t('seo.save')%> 
+    <%= f.label :canonical, "#{I18n.t('seo.form.canonical')}".html_safe %>
+    <%= f.text_field :canonical, placeholder: I18n.t('seo.form.canonical_placeholder') %>
+    </div>
+    <div class="spacer"></div>
+    <div id="seo_buttons">
+      <span id="cancel_seo_btn"><%= link_to I18n.t('seo.cancel'), "#" %> of</span>
+      
+      <%= f.submit I18n.t('seo.save')%> 
+    </div>
   <% end %>
 </div>
