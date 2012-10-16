@@ -83,8 +83,8 @@ module SeoFuel
     # renders a list of robot restrictions (nofollow, noindex)
     def robot_restrictions
       restrictions = []
-      restrictions << "noindex" if current_page.noindex
-      restrictions << "nofollow" if current_page.nofollow
+      restrictions << "noindex" if current_page && current_page.noindex
+      restrictions << "nofollow" if current_page && current_page.nofollow
       if restrictions.any?
         return restrictions.join(', ')
       else
