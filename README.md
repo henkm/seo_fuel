@@ -1,13 +1,11 @@
 # SEO Fuel: easily gas up search engines
 
-_This gem is still in early development. Described features work, but some features are still lacking. I'll be updating the documentation as I go along. Feel free to fork this project and improve on it._
-
 SEO Fuel is a super easy way to manage SEO tags in your Rails app. It doesn't require any adjustments to existing models or controllers. 
 
 ## Philosophy
 Where to put SEO? The main idea behind this gem is that end users often want to be able to fine tune SEO settings right in the browser, without going to some sort of backend or options file.
 
-SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings are stored in their own table and aren't linked to a page by complicated foreign keys, but rather by path ('/articles/1-article-title').
+SEO Fuel works by adding a form with SEO settings (title, description, etc.) to every single page of your app. This form is hidden, but pops up when you hit the button. The SEO settings are stored in their own table and aren't linked to a page by complicated foreign keys, but rather - be default - by path ('/articles/123').
 
 SEO Fuel makes it realy easy to have total control of the meta tags, while still keeping it just as easy to set great default SEO values.
 
@@ -58,6 +56,10 @@ The 'in browser' added SEO settings take precedence over all default values.
     <% default_description(@article.summary) %>
     <% default_keywords(@article.categories.map(&:name).join(',')) %>
 
+By default, the unique key for each set of SEO-settings is the path of the current page (`request.path`). If you want, you can manually set the unique key for a page, by defining it with a helper method in your view template:
+
+    <% seo_identifier("home_page") %>
+
 ### I18n
 This gem is fully I18n adjustable. Just edit the locale file, placed in the locales directory of your Rails app.
 
@@ -72,7 +74,6 @@ Authentication for the Controller layer is added through the key in a hidden fie
 ## TODO
 This gem is in early development, there are still some things to do:
 - add options for open_graph
-- add documentation
 - include testing
 
 

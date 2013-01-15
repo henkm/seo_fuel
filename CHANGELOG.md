@@ -1,3 +1,7 @@
+
+## version 0.1.5
+- added seo_identifier helper, in case you don't want to use URL
+
 ## version 0.1.2
 - add noindex and nofollow
 - show 'more options' link
