@@ -17,6 +17,10 @@ module SeoFuel
       link_to text, "#", class: "seo_fuel #{klass}", id: "edit_seo_btn"
     end
     
+    def seo_identifier(tag)
+      @seo_identifier = tag.force_encoding('utf-8')
+    end
+    
     # set your default title in any view template, by 
     # simply calling `default_title(your_title_here)`
     # this title takes precedence over the default title set
@@ -104,7 +108,7 @@ module SeoFuel
     # returns the current SeoTag object
     # this instance contains all the SEO options
     def current_page
-      SeoTag.find_by_path(request.path)
+      SeoTag.find_by_path(@seo_identifier.present? ? @seo_identifier : request.path)
     end
     
     # renders the `title_to_show` inside a `<title>` tag.
