@@ -1,4 +1,4 @@
-<%= link_to I18n.t('seo.button_text'), "#", class: "seo_fuel", id: "edit_seo_btn" unless SeoFuel::VERSION < "0.0.5" %>
+<%= link_to I18n.t('seo.button_text'), "javascript:void(0)", class: "seo_fuel", id: "edit_seo_btn" unless SeoFuel::VERSION < "0.0.5" %>
 <div id="edit_seo_dialog" class="seo_fuel" style="display: none;">
   <%= form_for SeoTag.find_or_initialize_by_path(@seo_identifier.present? ? @seo_identifier : request.path), remote: true, html: {class: "seo_form"} do |f|%>
     <%= f.hidden_field :path %>
@@ -11,7 +11,7 @@
 
     <div class="spacer"></div>
 
-    <%= link_to I18n.t('seo.more_options'), "#", id: 'more-options-btn'%>
+    <%= link_to I18n.t('seo.more_options'), "javascript:void(0)", id: 'more-options-btn'%>
     
     <div style="display: none;" id="more-options">
       <%= f.label :keywords, "#{I18n.t('seo.form.keywords')}".html_safe %>
@@ -30,7 +30,7 @@
     </div>
     <div class="spacer"></div>
     <div id="seo_buttons">
-      <span id="cancel_seo_btn"><%= link_to I18n.t('seo.cancel'), "#" %> <%= I18n.t('seo.or') %></span>
+      <span id="cancel_seo_btn"><%= link_to I18n.t('seo.cancel'), "javascript:void(0)" %> <%= I18n.t('seo.or') %></span>
       
       <%= f.submit I18n.t('seo.save')%> 
     </div>
