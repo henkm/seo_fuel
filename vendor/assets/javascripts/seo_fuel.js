@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).on('page:load ready', function() {
   $('#edit_seo_btn').bind('click', function() {
     $('#edit_seo_btn').slideUp();
     $('#edit_seo_dialog').slideDown();
