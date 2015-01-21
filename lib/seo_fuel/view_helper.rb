@@ -17,7 +17,7 @@ module SeoFuel
       link_to text, "#", class: "seo_fuel #{klass}", id: "edit_seo_btn"
     end
     
-    def seo_identifier(tag)
+    def seo_identifier(tag="")
       @seo_identifier = tag.force_encoding('utf-8')
     end
     
@@ -25,7 +25,7 @@ module SeoFuel
     # simply calling `default_title(your_title_here)`
     # this title takes precedence over the default title set
     # in your config file, but not over the one set 'in browser'
-    def default_title(title)
+    def default_title(title="")
       @default_title = title.force_encoding('utf-8')
     end
     
@@ -34,7 +34,7 @@ module SeoFuel
     # simply calling `default_description(your_description_here)`
     # this description takes precedence over the default description set
     # in your config file, but not over the one set 'in browser'
-    def default_description(description)
+    def default_description(description="")
       @default_description = description.force_encoding('utf-8')
     end
 
