@@ -52,7 +52,7 @@ class SeoFuelGenerator < Rails::Generators::Base
     File.join(%w(.. .. .. config locales))
   end
 
-  def javascripts_path
+  def javascript_path
     File.join(%w(.. .. .. vendor assets javascripts))
   end
 
