@@ -15,6 +15,10 @@ class SeoFuelGenerator < Rails::Generators::Base
     migration_template "migration.rb", "db/migrate/create_seo_fuel.rb"
   end
 
+  def self.next_migration_number(path)
+    @migration_number = Time.now.utc.strftime("%Y%m%d%H%M%S").to_i.to_s
+  end
+
   private
 
 
@@ -52,7 +56,7 @@ class SeoFuelGenerator < Rails::Generators::Base
     File.join(%w(.. .. .. config locales))
   end
 
-  def javascripts_path
+  def javascript_path
     File.join(%w(.. .. .. vendor assets javascripts))
   end
 
