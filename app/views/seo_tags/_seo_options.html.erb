@@ -1,6 +1,6 @@
 <%= link_to I18n.t('seo.button_text'), "javascript:void(0)", class: "seo_fuel", id: "edit_seo_btn" unless SeoFuel::VERSION < "0.0.5" %>
 <div id="edit_seo_dialog" class="seo_fuel" style="display: none;">
-  <%= form_for SeoTag.find_or_initialize_by_path(@seo_identifier.present? ? @seo_identifier : request.path), remote: true, html: {class: "seo_form"} do |f|%>
+  <%= form_for SeoTag.find_or_initialize_by(@seo_identifier.present? ? @seo_identifier : request.path), remote: true, html: {class: "seo_form"} do |f|%>
     <%= f.hidden_field :path %>
     <%= hidden_field_tag :key, seo_fuel_authentication_key  %>
     <%= f.label :title, "#{I18n.t('seo.form.title')}".html_safe %>
