@@ -4,7 +4,7 @@ class SeoTagsController < ApplicationController
   # creates the seo tags for given path (params[:seo_tag][:path])
   def create
     if params[:key] && params[:key] == authentication_key
-      @tag = SeoTag.find_or_create_by_path(seo_tag_params[:path])
+      @tag = SeoTag.find_or_create_by(path: seo_tag_params[:path])
       @tag.update_attributes(seo_tag_params)
       respond_to do |format|
         format.js
@@ -17,7 +17,7 @@ class SeoTagsController < ApplicationController
   # updates the seo tags for given path (params[:seo_tag][:path])
   def update
     if params[:key] && params[:key] == authentication_key
-      @tag = SeoTag.find_or_create_by_path(seo_tag_params[:path])
+      @tag = SeoTag.find_or_create_by(path: seo_tag_params[:path])
       @tag.update_attributes(seo_tag_params)
       respond_to do |format|
         format.js
